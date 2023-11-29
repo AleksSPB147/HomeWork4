@@ -17,8 +17,8 @@ int main()
     //task3();
     //task4();
     //task5();
-    task6();
-    //task7();
+    //task6();
+    task7();
 }
 
 
@@ -118,7 +118,8 @@ void task5()
 {
     const int size = 11;
     int array[size];
-    int* a = new int[size];
+    //int array_new = 11;
+    int temp;
     printf("Введите элемент массива: ");
     printf("\n\n");
     for (int i = 0; i < size; i++)
@@ -128,19 +129,57 @@ void task5()
     }
       for (int i = 0; i <  size; i++)   // Выводим массив в строку с пробелами
       {
-            printf("%d ", array[i]);
+            //printf("%d\n\n ", array[i]);
       }
 
       for (int i = 0; i < size / 2; i++)
       {
-          int t = a[i];
-          a[i] = a[size - i - 1];
-          a[size - i - 1] = t;
-          printf("%d ", a[i]);
+          temp = array[i];
+          array[i] = array[(size - 1) - i];
+          array[(size - 1) - i] = temp;
       }
-      
-
+      for (int i = 0; i < 11; i++)
+      {
+          std::cout << array[i] << " ";
+      }    
 }    
+
+
+void task6()
+
+{
+    const int size = 6;
+    int array1[size]{ 1,2,3,4,5,6};
+    int array2[size];
+
+    for (int i = 6; i != -1; i--)
+    {
+        array2[i] = array1[i];
+    }
+
+    for (int i = 0; i < size; i++)
+        std::cout << array2[size];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
      Создайте двумерный массив 10x10 целочисленных элементов.
@@ -149,17 +188,17 @@ void task5()
   Вывести значения массива на экран.
 */
 
-void task6()
-{
-    for (int i = 0; i < 10; i++)
-    {
-        for (int j = 0; j < 10; j++)
-            printf("%d %d", [i] [j]);
-    }
-
-
-
-}
+//void task6()
+//{
+//    for (int i = 0; i < 10; i++)
+//    {
+//        for (int j = 0; j < 10; j++)
+//            printf("%d %d", [i] [j]);
+//    }
+//
+//
+//
+//}
 
 
 
@@ -173,9 +212,28 @@ void task6()
 
 void task7()
 {
+    int array[10][10];
+    for (int i = 1; i < 11; i++)
+    {
+        for (int j = 1; j < 11; j++) {
+            array[i][j] = i * 10 + j *10;
 
+        }
 
+    }
 
+    for (int i = 1; i < 11; i++)
+    {
+        
+        
+        for (int j = 1; j < 11; j++)
+        {
+            std::cout << array[i][j] << std:: endl;
+
+        }
+        
+
+    }
 
 }
 
