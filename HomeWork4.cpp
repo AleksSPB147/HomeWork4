@@ -15,10 +15,10 @@ int main()
     //task1();
     //task2();
     //task3();
-    //task4();
+    task4();
     //task5();
     //task6();
-    task7();
+    //task7();
 }
 
 
@@ -32,12 +32,11 @@ void task1()
     const  int num = 10;
     int array[num] = { 9,8,7,6,5,4,3,2,1,0 };
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 10; i +=2)
     {
-       if (array[i] % 2 == 0)                   //Проверяем каждый элемент массива на четность
-       {
+       
            printf("%d ", array[i]);
-       }
+           
     }
 
 }
@@ -55,7 +54,7 @@ void task2()
 
     for (int i = size - 1; i >= 0; i--)
     {
-        if (array[i] %2 != 0)                 //Проверяем каждый элемент массива на не четность
+        if (i %2 != 0)                 //Проверяем каждый элемент массива на не четность
         {
            printf("%d  ", array[i]);
         }
@@ -98,9 +97,9 @@ void task4()
     int sum = 0;
     int array[num] = {};
      
-    for (int i = 0; i < num; i++)            // Заполняем массив через цикл for
+    for (int i = 0; i < num ; i++)            // Заполняем массив через цикл for
     {
-        array[i] = i * i;                    // Заполняем массив квадратами чисел
+        array[i] = (i + 1) * (i + 1);                    // Заполняем массив квадратами чисел
         printf("%d ", array[i]);
     }
 }
